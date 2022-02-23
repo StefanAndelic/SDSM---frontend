@@ -1,0 +1,8 @@
+{
+    "login":"/login",
+    "team":"/team",
+    "project":"/project",
+    "dashboard":"/dashboard",
+    "not-found":"*",
+    "default":"/"
+}

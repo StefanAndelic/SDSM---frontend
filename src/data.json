@@ -1,0 +1,324 @@
+[
+  {
+    "title": "Business Understanding",
+
+    "status": "complete",
+
+    "teamMembers": [
+      "Project Manager",
+      "Data Engineer",
+      "Data Scientist",
+      "Architect",
+      "Iteration Manager",
+      "UI Designer"
+    ],
+
+    "href": ["documentation", "https://google.com"],
+
+    "cards": [
+      {
+        "cardTitle": "Determining Business Objectives",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Assessing the Situation",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Determining Data Mining Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Plan",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Data Understanding",
+
+    "status": "complete",
+
+    "teamMembers": ["Project Manager", "Data Engineer", "Data Scientist"],
+
+    "cards": [
+      {
+        "cardTitle": "Determining Business Objectives",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Assessing the Situation",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Determining Data Mining Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Plan",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Data Prep",
+
+    "status": "inprogress",
+
+    "teamMembers": ["Project Manager", "Data Scientist"],
+
+    "href": ["documentation", "https://google.com"],
+
+    "cards": [
+      {
+        "cardTitle": "Marge data set (x) and (x), Link to Cloud Pak for Data",
+
+        "cardDetailedText": [
+          "Data Scientist has been notified",
+          "Possible conflict could cause a downstream privacy risk."
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Build & Train",
+
+    "status": "incomplete",
+
+    "teamMembers": [
+      "Project Manager",
+      "Data Engineer",
+      "Data Scientist",
+      "Architect"
+    ],
+
+    "href": ["documentation", "https://google.com"],
+
+    "cards": [
+      {
+        "cardTitle": "Determining Business Objectives",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Assessing the Situation",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Determining Data Mining Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Plan",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Evaluate & Deploy",
+
+    "status": "incomplete",
+
+    "teamMembers": [
+      "Project Manager",
+      "Data Engineer",
+      "Data Scientist",
+      "Architect",
+      "Iteration Manager",
+      "UI Designer"
+    ],
+
+    "href": ["documentation", "https://google.com"],
+
+    "cards": [
+      {
+        "cardTitle": "Determining Business Objectives",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Assessing the Situation",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Determining Data Mining Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Plan",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Monitor & Manage",
+
+    "status": "incomplete",
+
+    "teamMembers": ["Project Manager", "Data Engineer", "Iteration Manager"],
+
+    "href": ["documentation", "https://google.com"],
+
+    "cards": [
+      {
+        "cardTitle": "Determining Business Objectives",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Assessing the Situation",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Determining Data Mining Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Goals",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+
+      {
+        "cardTitle": "Producing a Project Plan",
+
+        "cardDetailedText": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      }
+    ]
+  }
+]
