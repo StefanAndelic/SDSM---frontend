@@ -1,1 +1,7 @@
+#exclude folders
 /node_modules
+#exclude files
+.DS_Store
+.env
+.logo.svg
+.reportWebVitals.ts

@@ -12,10 +12,11 @@ import DialogueTitleComponent from '../../components/Common/DialogTitle/dialogue
 import DialogComponent from '../../components/Common/Dialog/dialogComponent'
 
 //utils
-import * as Service from './addRoleForm.service'
+import * as Service from './utils/addRoleForm.service'
 
 //styles
 import { useStyles } from './style/customerListStyle'
+import { Alert } from '@mui/material'
 
 function AddRoleForm() {
   const classes = useStyles()
@@ -118,8 +119,13 @@ function AddRoleForm() {
   }
 
   const handleDelete = async (clickedUser: any) => {
-    await Service.deleteMember(clickedUser.id)
-    GetTeamMembers()
+    const r = window.confirm('Do you want to delete a member')
+    if (r === true) {
+      await Service.deleteMember(clickedUser.id)
+      GetTeamMembers()
+    } else if (r === false) {
+      alert('OK')
+    }
   }
 
   const handleSubmit = async (e: any) => {

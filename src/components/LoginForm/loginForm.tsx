@@ -1,12 +1,12 @@
 import Box from '@mui/material/Box'
 import FormControlLabelComponent from '../FormControlLabel/formControlLabel'
 import ButtonComponent from '../Common/Button/buttonComponent'
-import TextFieldComponent from '../Common/TextField/textFieldComponent'
+import TextField from '@mui/material/TextField'
 
 function LoginForm({ handleSubmit }: any) {
   return (
     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-      <TextFieldComponent
+      <TextField
         margin="normal"
         required
         fullWidth
@@ -16,7 +16,7 @@ function LoginForm({ handleSubmit }: any) {
         autoComplete="email"
         autoFocus
       />
-      <TextFieldComponent
+      <TextField
         margin="normal"
         required
         fullWidth

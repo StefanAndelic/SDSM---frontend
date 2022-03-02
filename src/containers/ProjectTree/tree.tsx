@@ -1,94 +1,95 @@
-import React, { useState, useEffect } from "react";
-import { Button, Grid, Box } from "@material-ui/core";
-import { DataGrid } from "@mui/x-data-grid";
-import NavBar from "../../components/NavBar/navBar";
-import { useStyles } from "./styles/customerListStyle";
-import TextField from "@material-ui/core/TextField";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import ButtonComponent from "../../components/Common/Button/buttonComponent";
+import React, { useState, useEffect } from 'react'
+import { Button, Grid, Box } from '@material-ui/core'
+import { DataGrid } from '@mui/x-data-grid'
+import NavBar from '../../components/NavBar/navBar'
 
-import * as ProjectService from "../ProjectTree/project.service";
+//styles
+import { useStyles } from './styles/customerListStyle'
+
+import TextField from '@material-ui/core/TextField'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import ButtonComponent from '../../components/Common/Button/buttonComponent'
+
+//utils
+import * as ProjectService from './utils/project.service'
 
 function Tree() {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
-  const [ID, setID] = useState("");
-  const [phase, setPhase] = useState("");
-  const [activity, setActivity] = useState("");
-  const [task, setTask] = useState("");
-  const [input, setInput] = useState("");
-  const [output, setOutput] = useState("");
+  const [ID, setID] = useState('')
+  const [phase, setPhase] = useState('')
+  const [activity, setActivity] = useState('')
+  const [task, setTask] = useState('')
+  const [input, setInput] = useState('')
+  const [output, setOutput] = useState('')
 
   interface p {
-    ID: number;
-    phase: number;
-    activity: string;
-    task: string;
-    input: string;
-    output: string;
+    ID: number
+    phase: number
+    activity: string
+    task: string
+    input: string
+    output: string
   }
 
-  let projectData: p[] = [];
-  const [customers, setCustomers] = useState(projectData);
+  let projectData: p[] = []
+  const [customers, setCustomers] = useState(projectData)
 
   const columns = [
     {
-      field: "id",
-      headerName: "ID",
+      field: 'id',
+      headerName: 'ID',
       width: 50,
     },
     {
-      field: "phase",
-      headerName: "Phase",
+      field: 'phase',
+      headerName: 'Phase',
       width: 200,
     },
     {
-      field: "activity",
-      headerName: "Activity",
+      field: 'activity',
+      headerName: 'Activity',
       width: 200,
     },
     {
-      field: "task",
-      headerName: "Task",
-      description: "This column has a value getter and is not sortable.",
+      field: 'task',
+      headerName: 'Task',
       width: 250,
     },
     {
-      field: "input",
-      headerName: "Input",
-      description: "This column has a value getter and is not sortable.",
+      field: 'input',
+      headerName: 'Input',
       width: 200,
     },
     {
-      field: "output",
-      headerName: "Output",
-      description: "This column has a value getter and is not sortable.",
+      field: 'output',
+      headerName: 'Output',
       width: 250,
     },
     {
-      field: "action",
-      headerName: "Action",
+      field: 'action',
+      headerName: 'Action',
       width: 150,
 
       renderCell: (id: any) => (
         <>
           <ButtonComponent
             style={{
-              backgroundColor: "#e8605d",
-              padding: "3px 35px",
+              backgroundColor: '#e8605d',
+              padding: '3px 35px',
             }}
             onClick={() => handleDelete(id)}
             variant="contained"
             color="primary"
             type="submit"
             sx={{
-              "&:hover": {
-                color: "black",
+              '&:hover': {
+                color: 'black',
               },
             }}
           >
@@ -97,38 +98,44 @@ function Tree() {
         </>
       ),
     },
-  ];
+  ]
 
+  //loads the data
   useEffect(() => {
-    GetData();
-  }, []);
+    GetData()
+  }, [])
 
   const GetData = async () => {
-    GetProjectPhases();
-  };
+    GetProjectPhases()
+  }
 
   const GetProjectPhases = async () => {
-    let project = await ProjectService.getProjectDetails();
-    projectData = project?.data;
-    setCustomers(projectData);
-  };
+    let project = await ProjectService.getProjectDetails()
+    projectData = project?.data
+    setCustomers(projectData)
+  }
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   const handleDelete = async (clickedUser: any) => {
-    console.log(clickedUser.id);
-    await ProjectService.deleteProjectStep(clickedUser.id);
-    GetData();
-  };
+    // console.log(clickedUser.id)
+    const r = window.confirm('Do you want to delete a project step')
+    if (r === true) {
+      await ProjectService.deleteProjectStep(clickedUser.id)
+      GetData()
+    } else if (r === false) {
+      alert('OK')
+    }
+  }
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
 
     const response = await ProjectService.addPhase(
       ID,
@@ -136,12 +143,12 @@ function Tree() {
       activity,
       task,
       input,
-      output
-    );
-    console.log(response?.data);
+      output,
+    )
+    // console.log(response?.data)
 
-    GetData();
-  };
+    GetData()
+  }
 
   return (
     <React.Fragment>
@@ -263,7 +270,7 @@ function Tree() {
         </Box>
       </Grid>
     </React.Fragment>
-  );
+  )
 }
 
-export default Tree;
+export default Tree

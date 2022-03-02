@@ -8,9 +8,10 @@ import Dashboard from '../../containers/project/project'
 import Tree from '../../containers/ProjectTree/tree'
 
 //utils
-import paths from '../../paths.json'
-
+import paths from '../../config/paths.json'
+import { ProjectStore } from '../../App'
 function AllRoutes() {
+  const projectStore = new ProjectStore()
   return (
     <main className="container">
       <Routes>
@@ -21,7 +22,10 @@ function AllRoutes() {
         <Route path={paths['not-found']} element={<NotFound />} />
         <Route path={paths.team} element={<TeamPage />} />
         <Route path={paths.project} element={<Tree />} />
-        <Route path={paths.dashboard} element={<Dashboard />} />
+        <Route
+          path={paths.dashboard}
+          element={<Dashboard store={projectStore} />}
+        />
       </Routes>
     </main>
   )

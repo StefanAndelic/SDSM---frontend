@@ -7,7 +7,7 @@ import LoginForm from '../../components/LoginForm/loginForm'
 import TextComponent from '../../components/Common/Text/textComponent'
 import BoxComponent from '../../components/Common/Box/boxComponent'
 
-import * as Service from './login.service'
+import * as Service from './utils/login.service'
 import * as TokenService from './utils/token.service'
 
 const theme = createTheme()
