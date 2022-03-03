@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   offset: theme.mixins.toolbar,
 }))
-//https://unified-profile-api.us-south-k8s.intranet.ibm.com/v3/image/6J6626897
 
 export default function NavBar() {
   const classes = useStyles()
@@ -112,7 +111,19 @@ export default function NavBar() {
               </React.Fragment>
             )}
           </Box>
-          <IconComponent alt="Stefan" src="" onClick={handleDeleteToken} />
+          {token === 'Project Manager' ? (
+            <IconComponent
+              alt="Stefan"
+              src="https://unified-profile-api.us-south-k8s.intranet.ibm.com/v3/image/6J6626897"
+              onClick={handleDeleteToken}
+            />
+          ) : (
+            <IconComponent
+              alt="P"
+              src="/static/images/avatar/1.jpg"
+              onClick={handleDeleteToken}
+            />
+          )}
         </Toolbar>
       </AppBarComponent>
       <Toolbar />
